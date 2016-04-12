@@ -32,9 +32,12 @@ public class MonstersAndMen extends Music
 	}
 
 	@Override
-	public void philantropy()
+	public int philantropy()
 	{
 		// TODO Auto-generated method stub
+		int charityLevel = 1;
 		
+		return charityLevel;
 	}
+	
 }

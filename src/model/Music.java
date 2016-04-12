@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Music implements IronMan
+public abstract class Music implements IronMan, Comparable
 {
 	//Three data memebers 
 	private String title;
@@ -31,4 +31,36 @@ public abstract class Music implements IronMan
 	{
 		this.songLength = songLength;
 	}
+	
+	public int compareTo(Object compared)
+	{
+		int comparedValue = Integer.MIN_VALUE;
+		
+		if(compared instanceof IronMan)
+		{
+			if(this.philantropy() > ((IronMan) compared).philantropy())
+			{
+				comparedValue = 1;
+			}
+			else if(this.philantropy() < ((IronMan) compared).philantropy())
+			{
+				comparedValue = -1;
+			}
+			else
+			{
+				comparedValue = 0;
+			}
+		}
+		
+		return comparedValue;
+	}
+	
+	public String toString()
+	{
+		String description = "This is a " + this.getClass() + " and has a ";
+		
+		return description;
+		
+	}
+	
 }

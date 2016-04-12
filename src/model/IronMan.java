@@ -5,5 +5,5 @@ public interface IronMan
 	public void fly();
 	public void useWristRocket();
 	public void userIonBlaster();
-	public void philantropy();
+	public int philantropy();
 }
