@@ -27,7 +27,9 @@ public class AbstractPanel extends JPanel
 	
 	private void setUpPanel()
 	{
-		
+		this.setLayout(baseLayout);
+		this.add(abstractButton);
+		this.add()
 	}    
 	
 	private void setUpLayout()
