@@ -38,11 +38,11 @@ public abstract class Music implements IronMan, Comparable
 		
 		if(compared instanceof IronMan)
 		{
-			if(this.philantropy() > ((IronMan) compared).philantropy())
+			if(this.ironMan() > ((IronMan) compared).ironMan())
 			{
 				comparedValue = 1;
 			}
-			else if(this.philantropy() < ((IronMan) compared).philantropy())
+			else if(this.ironMan() < ((IronMan) compared).ironMan())
 			{
 				comparedValue = -1;
 			}
