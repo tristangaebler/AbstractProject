@@ -25,7 +25,7 @@ public class MusicController
 		String ironManLevels = "";
 		for(IronMan iron : ironMan)
 		{
-			ironManLevels.concat("This is a " + iron.toString() + " and has a silliness level if" + iron.ironManLevels() + "\b");
+			ironManLevels = "This is a " + iron.toString() + " and has a silliness level if" + iron.ironManLevels() + "\b";
 		}
 		
 		return ironManLevels;
