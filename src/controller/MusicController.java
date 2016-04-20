@@ -2,6 +2,7 @@ package controller;
 
 import java.util.ArrayList;
 
+import view.AbstractFrame;
 import model.IronMan;
 import model.MilesDavis;
 import model.TheBeatles;
@@ -9,11 +10,13 @@ import model.TheBeatles;
 public class MusicController
 {
 	private ArrayList<IronMan> ironMan;
+	private AbstractFrame baseFrame;
 	
 	public MusicController()
 	{
 		ironMan = new ArrayList<IronMan>();
 		makeIronManList();
+		baseFrame = new AbstractFrame(this);
 	}
 	
 	public void start()

@@ -27,9 +27,6 @@ public class AbstractPanel extends JPanel
 		abstractButton = new JButton("Abstract Button");
 		textField = new JTextField("Abstract Text Field");
 		baseLayout = new SpringLayout();
-		
-		
-		//Calling methods
 		setUpPanel();
 	}
 	
