@@ -12,6 +12,7 @@ public class MusicController
 	
 	public MusicController()
 	{
+		ironMan = new ArrayList<IronMan>();
 		makeIronManList();
 	}
 	
