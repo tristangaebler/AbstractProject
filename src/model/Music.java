@@ -1,5 +1,7 @@
 package model;
 
+import controller.MusicController;
+
 public abstract class Music implements IronMan, Comparable
 {
 	//Three data memebers 
@@ -61,6 +63,11 @@ public abstract class Music implements IronMan, Comparable
 		
 		return description;
 		
+	}
+	public int ironMan()
+	{
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

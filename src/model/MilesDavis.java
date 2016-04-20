@@ -1,12 +1,12 @@
 package model;
 
-public class MonstersAndMen extends Music
+public class MilesDavis extends Music
 {
 
-	public MonstersAndMen()
+	public MilesDavis()
 	{
-		this.setGenre("Indie/Alternative");
-		this.setTitle("MonstersAndMen");
+		this.setGenre("Jazz");
+		this.setTitle("Blue in Green");
 		this.setSongLength(240);
 	}
 
@@ -38,6 +38,20 @@ public class MonstersAndMen extends Music
 		int charityLevel = 1;
 		
 		return charityLevel;
+	}
+
+	@Override
+	public int comapreTo(Object thing)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double ironManLevels()
+	{
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

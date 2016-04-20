@@ -39,5 +39,26 @@ public class TheBeatles extends Music
 		
 		return charityLevel;
 	}
+
+	@Override
+	public int comapreTo(Object thing)
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int ironMan()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double ironManLevels()
+	{
+		// TODO Auto-generated method stub
+		return 0;
+	}
 		
 }

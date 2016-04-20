@@ -1,7 +1,15 @@
 package view;
 
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
+import javax.swing.JButton;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SpringLayout;
+
+import model.IronMan;
 import controller.MusicController;
 
 public class AbstractPanel extends JPanel
@@ -9,6 +17,7 @@ public class AbstractPanel extends JPanel
 	private MusicController baseController;
 	private JButton abstractButton;
 	private JTextField textField;
+	private JTextArea textArea;
 	private SpringLayout baseLayout;
 	
 	
@@ -41,6 +50,18 @@ public class AbstractPanel extends JPanel
 	
 	private void setUpListeners()
 	{
-		
+		abstractButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent click)
+			{
+				baseController.insertionSort();
+				String temp = "The sorted contents are: \n";
+				for(IronMan iron : baseController.getIronMan())
+				{
+					temp += iron.toString() + "\n";
+				}
+				textArea.setText(temp);
+			}
+		});
 	}
 }

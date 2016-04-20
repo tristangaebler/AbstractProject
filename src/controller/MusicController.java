@@ -3,19 +3,35 @@ package controller;
 import java.util.ArrayList;
 
 import model.IronMan;
-import model.MonstersAndMen;
+import model.MilesDavis;
 import model.TheBeatles;
 
 public class MusicController
 {
 	private ArrayList<IronMan> ironMan;
 	
-	public void start()
+	public MusicController()
 	{
-		ironMan.add(new TheBeatles());
-		ironMan.add(new MonstersAndMen());
+		makeIronManList();
 	}
 	
+	public void start()
+	{
+		
+	}
+	
+	public String showIronMan()
+	{
+		String ironManLevels = "";
+		for(IronMan iron : ironMan)
+		{
+			ironManLevels.concat("This is a " + iron.toString() + " and has a silliness level if" + iron.ironManLevels() + "\b");
+		}
+		
+		return ironManLevels;
+	}
+	
+
 	public void swap(int firstLocation, int secondLocation)
 	{
 		IronMan temp = ironMan.get(firstLocation);
@@ -65,6 +81,22 @@ public class MusicController
 		swap(position, high);
 		
 		return position;
+	}
+	
+	private void makeIronManList()
+	{
+		ironMan.add(new TheBeatles());
+		ironMan.add(new MilesDavis());
+	}
+
+	public ArrayList<IronMan> getIronMan()
+	{
+		return ironMan;
+	}
+
+	public void setIronMan(ArrayList<IronMan> ironMan)
+	{
+		this.ironMan = ironMan;
 	}
 
 }
